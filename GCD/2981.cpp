@@ -1,12 +1,9 @@
 #include <iostream>
+#include <cstdio>
 
 using namespace std;
 
 int gcd(int a, int b){
-  if (b > a){
-    return gcd(b, a);
-  }
-
   if(b == 0){
       return a;
   }else{
@@ -16,15 +13,15 @@ int gcd(int a, int b){
 
 int main(){
     
-  int array_n[100] = {};
-  int array_minus[50] = {};
-  int array_gcd[50] = {};
+  int array_n[101] = {};
+  int array_minus[101] = {};
+  int array_gcd[101] = {};
 
   int n;
-  cin >> n;
+  scanf ("%d", &n);
   
   for (int i = 1; i <= n; i++){
-    cin >> array_n[i];
+    scanf("%d", &array_n[i]);
   }
   
   for (int i = 1; i < n; i++){
@@ -40,10 +37,10 @@ int main(){
     
   for (int i = 2; i * i <= g; i++){
     if (i % i == g){
-      cout << i << " ";
+      printf("%d ", i);
     }
     else if (g % i == 0){
-      cout << i << " " << g / i << " ";
+      printf("%d %d ", i, g/i);
     }
   }
   return 0;
