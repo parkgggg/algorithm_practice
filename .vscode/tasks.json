@@ -1,7 +1,7 @@
 {
   "tasks": [
     {
-      "type": "cppbuild",
+      "type": "shell",
       "label": "C/C++: g++ 활성 파일 빌드",
       "command": "/usr/bin/g++",
       "args": [
@@ -17,7 +17,10 @@
       "problemMatcher": [
         "$gcc"
       ],
-      "group": "build",
+      "group": {
+        "kind": "build",
+        "isDefault": true
+      },
       "detail": "디버거에서 생성된 작업입니다."
     },
     {
@@ -37,10 +40,7 @@
       "problemMatcher": [
         "$gcc"
       ],
-      "group": {
-        "kind": "build",
-        "isDefault": true
-      },
+      "group": "build",
       "detail": "디버거에서 생성된 작업입니다."
     }
   ],
