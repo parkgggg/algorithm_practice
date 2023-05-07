@@ -43,7 +43,7 @@ int bfs(int start_x, int start_y, int m[][MAX]){ //m은 세 개의 벽이 세워
       }
     }
   }
-
+  
   return virused;
 }
 
